@@ -1,10 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import { useEvents } from '../../hooks/useEvents';
 import Character from './Character';
 
-const CharacterList = ({ characters }) => {
-    return (
-        <ul aria-label="characters" role="list">
+const CharacterList = ({ characters, id }) => {
+
+    <button onClick={() => {
+        location.replace(`/${character.id}`);
+    }}>
             {characters.map((character) => (
                 <li key={character.id}>
                     <Character
@@ -13,18 +15,7 @@ const CharacterList = ({ characters }) => {
                     />
             </li>
             ))}
-        </ul>
-    )
+        </button>
 }
-
-CharacterList.propTypes = {
-    characters: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            name: PropTypes.string.isRequired,
-            image: PropTypes.string.isRequired
-        })
-    ).isRequired,
-};
 
 export default CharacterList;
