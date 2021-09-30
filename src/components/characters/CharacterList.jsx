@@ -1,21 +1,20 @@
 import React from 'react';
-import { useEvents } from '../../hooks/useEvents';
+import PropTypes from 'prop-types'
 import Character from './Character';
 
-const CharacterList = ({ characters, id }) => {
-
-    <button onClick={() => {
+const CharacterList = ({ name, image }) => {
+ 
+   return (<button onClick={() => {
         location.replace(`/${character.id}`);
     }}>
-            {characters.map((character) => (
-                <li key={character.id}>
-                    <Character
-                        name={character.name}
-                        image={character.image}
-                    />
-            </li>
-            ))}
-        </button>
+        <img src={image} alt={name} height={'200px'} />
+        <h2>{name}</h2>
+    </button>)
+};
+
+Character.propTypes = {
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
 }
 
 export default CharacterList;
