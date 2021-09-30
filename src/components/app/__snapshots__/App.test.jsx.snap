@@ -337,3 +337,19 @@ exports[`Hey Arnold App displays a list of hey arnold characters 1`] = `
   </ul>
 </div>
 `;
+
+exports[`Hey Arnold Detail displays a single character 1`] = `
+<div>
+  <ul
+    aria-label="single-character"
+  >
+    <img
+      alt="character image"
+      src="https://vignette.wikia.nocookie.net/heyarnold/images/6/62/Nancy.jpg/revision/latest/scale-to-width-down/310?cb=20110423055923"
+    />
+    <h2>
+      Nancy
+    </h2>
+  </ul>
+</div>
+`;

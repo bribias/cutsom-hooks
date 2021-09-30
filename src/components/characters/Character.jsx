@@ -10,10 +10,10 @@ const Character = () => {
         );
     
     return (
-        <div aria-label="single character" role="div">
+        <ul aria-label="single-character">
             <img src={character.image} alt="character image" />
             <h2>{character.name}</h2>
-        </div>
+        </ul>
     );
 };
 
