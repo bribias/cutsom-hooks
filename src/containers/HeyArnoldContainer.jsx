@@ -15,8 +15,6 @@ return loading ? (
                 <Pagination
                 activePage={activePage}
                 onChange={handleClick}
-                firstPageText="first"
-                lastPageText="last"
                 prevPageText="prev"
                 nextPageText="next"
                 />

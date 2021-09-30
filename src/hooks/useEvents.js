@@ -5,6 +5,9 @@ import { fetchCharacters, fetchOneCharacter } from '../services/heyArnoldAPI';
 export const useEvents = () => {
   const [loading, setLoading] = useState(true);
   const [characters, setCharacters] = useState([]);
+  const handleClick = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
 
   useEffect(() => {
     fetchCharacters()

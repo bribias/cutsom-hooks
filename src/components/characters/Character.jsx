@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import { useDetailEvents } from '../../hooks/useEvents';
 
 const Character = ({ name, image }) => {
     return (
@@ -7,11 +7,6 @@ const Character = ({ name, image }) => {
         <img src={image} alt="character image" />
         <h2>{name}</h2>
     </div>)
-};
-
-Character.propTypes = {
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
 };
 
 export default Character;
